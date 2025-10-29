@@ -14,7 +14,7 @@
 #X msg 1460 259 read -resize \$1 deck1;
 #X obj 1467 327 soundfiler;
 #X obj 1427 439 array define deck1;
-#X floatatom 1490 391 10 0 0 0 DURACION_D1 - - 0;
+#X floatatom 1490 391 10 0 0 0 SAMPLES_D1 - - 0;
 #X obj 7 420 tabplay~ deck1;
 #X obj 20 272 bng 15 250 50 0 empty empty PLAY_D1 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 86 269 bng 15 250 50 0 empty empty STOP_D1 0 -10 0 12 #fcfcfc #000000 #000000;
@@ -52,7 +52,7 @@
 #X msg 1632 264 read -resize \$1 deck2;
 #X obj 1639 332 soundfiler;
 #X obj 1599 444 array define deck2;
-#X floatatom 1662 396 10 0 0 0 DURACION_D2 - - 0;
+#X floatatom 1662 396 10 0 0 0 SAMPLES_D2 - - 0;
 #X obj 807 420 tabplay~ deck2;
 #X obj 853 270 bng 15 250 50 0 empty empty PLAY_D2 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 897 278 bng 15 250 50 0 empty empty STOP_D2 0 -10 0 12 #fcfcfc #000000 #000000;
