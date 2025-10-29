@@ -24,9 +24,9 @@
 #X obj 11 600 clip~ -0.99 0.99;
 #X obj 98 659 freeverb~;
 #X obj 400 705 freeverb~;
-#X obj 130 719 *~ 1;
-#X obj 206 728 *~ 1;
-#X obj 70 769 dac~;
+#X obj 130 780 *~ 1;
+#X obj 206 789 *~ 1;
+#X obj 70 830 dac~;
 #X msg 50 330 1;
 #X msg 100 330 0;
 #X obj 161 151 print;
@@ -38,6 +38,13 @@
 #X floatatom 446 400 5 0 1 0 REVERB_DRY - - 0;
 #X msg 426 538 wet \$1;
 #X msg 543 547 dry \$1;
+#X floatatom 550 260 5 0 1 0 DELAY_MIX - - 0;
+#X obj 98 690 delwrite~ delayL 2000;
+#X obj 400 735 delwrite~ delayR 2000;
+#X obj 98 720 delread~ delayL 500;
+#X obj 400 765 delread~ delayR 500;
+#X obj 98 750 *~ 0;
+#X obj 400 795 *~ 0;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 30 0;
@@ -46,6 +53,7 @@
 #X connect 3 1 7 0;
 #X connect 3 2 8 0;
 #X connect 3 3 9 0;
+#X connect 3 4 39 0;
 #X connect 4 0 0 0;
 #X connect 5 0 4 0;
 #X connect 6 0 25 1;
@@ -68,7 +76,9 @@
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
+#X connect 23 0 40 0;
 #X connect 23 0 25 0;
+#X connect 24 0 41 0;
 #X connect 24 0 26 0;
 #X connect 25 0 27 0;
 #X connect 26 0 27 1;
@@ -84,3 +94,9 @@
 #X connect 37 0 24 0;
 #X connect 38 0 23 0;
 #X connect 38 0 24 0;
+#X connect 39 0 44 1;
+#X connect 39 0 45 1;
+#X connect 42 0 44 0;
+#X connect 43 0 45 0;
+#X connect 44 0 25 0;
+#X connect 45 0 26 0;
