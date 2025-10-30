@@ -26,7 +26,7 @@
 #X obj 38 926 *~ 1;
 #X obj 258 892 *~ 1;
 #X msg 20 322 1;
-#X msg 67 323 0;
+#X msg 67 323 stop;
 #X obj 232 76 print;
 #X obj 154 493 hip~ 20;
 #X obj 154 520 lop~ 10000;
@@ -62,7 +62,7 @@
 #X obj 1006 650 *~ 1;
 #X obj 171 922 dac~;
 #X msg 850 330 1;
-#X msg 900 330 0;
+#X msg 900 330 stop;
 #X obj 954 493 hip~ 20;
 #X obj 954 520 lop~ 10000;
 #X obj 994 600 *~ 1;
